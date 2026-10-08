@@ -1,0 +1,251 @@
+:root {
+  --ink: #102a2a;
+  --teal: #0f766e;
+  --teal-dark: #115e59;
+  --sand: #f4efe6;
+  --paper: #fffdf8;
+  --accent: #e07a3d;
+  --muted: #5c6b6b;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--ink);
+  background: var(--sand);
+}
+
+.site-header {
+  background: var(--ink);
+}
+
+.site-header .navbar {
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+}
+
+.navbar-brand {
+  color: #fff !important;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #fff !important;
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.btn-cart {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.btn-cart:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+#contador-carrito {
+  background: var(--accent);
+  color: #fff;
+}
+
+.hero {
+  min-height: 58vh;
+  padding: 4.5rem 0;
+  color: #fff;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(224, 122, 61, 0.45), transparent 28%),
+    linear-gradient(145deg, #102a2a 0%, #0f766e 100%);
+}
+
+.btn-hero {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  border: 0;
+}
+
+.btn-hero:hover {
+  background: #c9652d;
+  color: #fff;
+}
+
+.section-titulo {
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.65rem;
+}
+
+.section-titulo::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 52px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--accent);
+  transform: translateX(-50%);
+}
+
+.section-titulo.text-start::after {
+  left: 0;
+  transform: none;
+}
+
+.producto-card {
+  height: 100%;
+  border: 0;
+  border-radius: 14px;
+  background: var(--paper);
+  box-shadow: 0 8px 20px rgba(16, 42, 42, 0.06);
+}
+
+.producto-imagen-wrap {
+  height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background: #fff;
+}
+
+.producto-imagen {
+  max-width: 100%;
+  max-height: 170px;
+  object-fit: contain;
+}
+
+.producto-titulo {
+  font-size: 1rem;
+  min-height: 2.6rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.producto-categoria {
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.producto-precio {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--teal-dark);
+}
+
+.btn-agregar {
+  background: var(--teal);
+  color: #fff;
+  border: 0;
+}
+
+.btn-agregar:hover {
+  background: var(--teal-dark);
+  color: #fff;
+}
+
+.nosotros {
+  background: var(--paper);
+}
+
+.nosotros .bi-check-circle-fill {
+  color: var(--teal);
+}
+
+.panel-nosotros {
+  min-height: 280px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  color: #fff;
+  font-size: 3.5rem;
+  background: linear-gradient(160deg, #115e59, #e07a3d);
+}
+
+.carrito-item {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.85rem;
+  border-radius: 12px;
+  background: var(--paper);
+}
+
+.carrito-item img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.resumen {
+  border: 0;
+  border-radius: 14px;
+  background: var(--paper);
+  position: sticky;
+  top: 1rem;
+}
+
+.site-footer {
+  background: var(--ink);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.site-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contacto-card {
+  border: 0;
+  border-radius: 16px;
+  background: var(--paper);
+}
+
+#aviso {
+  background: var(--teal);
+  color: #fff;
+}
+
+#aviso .btn-close {
+  filter: invert(1);
+}
+
+@media (max-width: 767.98px) {
+  .hero {
+    text-align: center;
+    min-height: auto;
+  }
+
+  .hero .display-4 {
+    font-size: 2.1rem;
+  }
+
+  .panel-nosotros {
+    min-height: 180px;
+    font-size: 2.4rem;
+  }
+}
